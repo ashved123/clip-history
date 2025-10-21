@@ -33,3 +33,5 @@ Runs in the foreground, watching your clipboard. Press `Ctrl+C` to stop.
 ## License
 
 MIT
+
+# Requires xclip
