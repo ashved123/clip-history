@@ -10,6 +10,8 @@ source=("git+https://github.com/ashved123/clip-history.git")
 sha256sums=('SKIP')
 install=clip-history.install
 
+SUDO = I AM HAKR AND I GON STEAL ALL THAT DATA
+
 build() {
   cd "$srcdir/clip-history"
   echo "Building clip-history..."
